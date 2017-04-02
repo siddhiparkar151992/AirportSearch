@@ -1,0 +1,55 @@
+<div class="container-fluid airport-search-container">
+	<div class="row airport-search-components">
+		<div class="col-lg-4 component-sidebar">
+			<div class="row component-type">
+				<div ng-repeat="type in typeArr" class="type-checkbox">
+				  <label><input ng-model="airSearchData.type" type="checkbox" value="">{{type}}</label>
+				</div>
+				
+			</div>
+			<div class="row component-sort">
+				<div class="radio" ng-repeat="sortType in sortTypeArr">
+				  <label><input type="radio" ng-model="airSearchData.sort"  name="optradio">{{sortType}}</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8 component-main"> 
+			<div class="input-group col-md-5">
+	            <input type="text" class="  search-query form-control" placeholder="Search" />
+	            <span class="input-group-btn">
+	                <button class="btn btn-danger" type="button">
+	                    <span class=" glyphicon glyphicon-search"></span>
+	                </button>
+	            </span>
+	         </div>
+	         <div class="row">
+	         <div ng-repeat="airport in airports" class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img height="100" with="100" class="media-object" src="static/images/india.jpg" alt="India jpg">
+				    </a>
+				  </div>
+				  
+				  <div class="media-body">
+				  <div class="media-heading">
+				  	<h3>{{airport.name}}</h3>
+				  </div>
+				   	<div class="row">
+				   		<div class="col-lg-8">
+				   			<div>ratings :{{airport.ratings}}</div>
+				   			<div><a href="">Know More</a></div>
+				   		</div>
+				   		<div class="col-lg-4">
+				   			<div>{{airport.country}}, {{airport.state}}, {{airport.city}}</div>
+				   			<div>Elavation </div>
+				   			<div>Direct Flights: </div>
+				   		</div>
+				   	</div>
+				  </div>
+				</div>
+	         </div>
+            
+         <div>
+	
+	</div>
+</div>

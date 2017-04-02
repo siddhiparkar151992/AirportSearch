@@ -1,0 +1,15 @@
+<ul class="pagination" >
+	<li class="page-list-wrapper" ng-if="item.current" ng-repeat="item in pageList" >
+		<ul class="stack-list pagination">
+			<li ng-if="pageList[$index-1]" ng-click="showPrev($index)">
+				<a>Previous</a>
+			</li>
+			<li  ng-click="setCurrentPage(page)" ng-repeat="page in item.pages">
+				<a >{{page}}</a>
+			</li >
+			<li ng-if="pageList[$index+1]" ng-click="showNext($index)">
+				<a>Next</a>
+			</li>
+		</ul>
+	</li>
+</ul>
